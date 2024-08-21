@@ -1,0 +1,128 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #efefef;
+}
+
+header {
+    background-color: #212931;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+#blog-title {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.posts-container {
+    width: 90%; 
+    max-width: 600px; 
+    margin: 0 auto;
+}
+
+.post img {
+    width: 100%;
+}
+
+.post {
+    transition: background-color 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+    background-color: white;
+    margin: 1rem 0;
+    border-radius: 0.7rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+}
+
+.post:hover {
+    background-color: #C8102E;
+    transform: scale(1.05);
+    box-shadow: 0 0.35rem 0.6rem rgba(0, 0, 0, 0.4);
+}
+
+.post h2, .post p {
+    margin: 1rem;
+}
+
+footer {
+    background-color: #222;
+    padding: 2rem;
+    color: #efefef;
+}
+
+footer section {
+    float: right;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    transition: color 0.3s ease;
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: cornflowerblue;
+}
+
+.background-container {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.background-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: opacity 1s ease;
+    z-index: -1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* Estilos para la barra de búsqueda */
+.search-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    width: 90%; 
+    max-width: 300px; 
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.search-container button {
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: 5px;
+    color: #fff;
+    background-color: #c8102e;
+    border: none;
+    transition: transform 0.3s ease; 
+}
+
+.search-container input[type="text"]:focus,
+.search-container button:focus {
+    transform: scale(1.1);
+}
